@@ -1,0 +1,41 @@
+
+<body class="login-page">
+    <div class="chaski-login-box">
+        <header>
+             <h1>Registrate en Chaski</h1>
+        </header>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-wrapper">
+                <label for="user-name-id">First Name</label>
+                {{ form.first_name }}
+            </div>
+            <div class="input-wrapper">
+                <label for="user-name-id">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="input-wrapper">
+                <label for="user-name-id">Email</label>
+                {{ form.email }}
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password-id">Password</label>
+                {{ form.password1 }}
+            </div>
+            <div class="input-wrapper">
+                <label for="password-id">Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+
+            <button class="chaski-btn">Registrarse</button>
+        </form>
+
+        <div class="footer">
+            <p href="#">¿Ya tienes una cuenta?</p>
+            <p><a href="{% url 'usuarios' %}" class="btn text-white my-2 my-sm-0" type="submit">Log in</a></p>
+        </div>
+
+    </div>
+</body>

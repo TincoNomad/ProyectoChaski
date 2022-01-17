@@ -1,0 +1,18 @@
+{% include 'index.html' %}
+
+<body>
+    {{ user }}
+   <p>Conectados</p>
+    <ul>
+    {% for user in object_list %}
+        <li>
+            <a href='/usuarios/{{ user }}'>
+                {{ user }}
+            </a>
+        </li>
+    <br>
+    {%endfor%}
+    </ul>
+</body>
+
+

@@ -1,0 +1,32 @@
+
+<body class="login-page">
+    <div class="chaski-login-box">
+        <header>
+            <h1>Inicia Sesión</h1>
+        </header>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-wrapper">
+                <label for="user-name-id">Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password-id">Password</label>
+                {{ form.password }}
+            </div>
+            {% if form.errors %}
+            <p>Username or password not correct.</p>
+            {% endif %}
+
+            <button class="chaski-btn">Log in</button>
+        </form>
+
+        <div class="footer">
+            <p>¿No tienes cuenta?</p>
+            <p><a href="{% url 'registro' %}" class="btn text-white my-2 my-sm-0" type="submit">Registrate</a></p>
+        </div>
+
+    </div>
+</body>
