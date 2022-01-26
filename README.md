@@ -1,2 +1,3 @@
 # ProyectoChaski
-Messaging app with some blockchain integration. In the future the app will be deploy on a decentralized server 
+Messaging app
+The objectie of this proyect is to get some interaction with a cryptowallet for the authentication part 
